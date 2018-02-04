@@ -1,0 +1,28 @@
+<div class='auth-box'>
+    <div *ngIf="userService.chechAuth(); then cabinet else login"></div>
+    <ng-template #login><span class='btn btn-primary' (click)="openAuth()">Авторизация</span></ng-template>
+    <ng-template #cabinet><span class='btn btn-primary'>Кабинет {{userService.user.name}} </span></ng-template>
+</div>
+
+<template id="auth-modal">
+    <div class='menu-list'>
+        <a class='menu-item' [ngClass]="{'check':mode === 'email'}" (click)="setMode('email')">По email</a>
+        <a class='menu-item' [ngClass]="{'check':mode === 'vk'}" (click)="setMode('vk')">Через VK</a>
+    </div>
+    <div class='menu-box'>
+        <div class='menu-box__item' [hidden]="mode !== 'vk'">
+            <span class='btn btn-primary'> Открыть страницу авторизации </span>
+        </div>
+        <form class='menu-box__item' [hidden]="mode !== 'email'" (submit)="sendEmail($event)">
+            <p class='auth-help-vk'>
+                Для авторизации по email заполните свой email и подтвердите, на ваш email придёт сообщение с ссылкой для авторизации
+            </p>
+            <div>
+                <input type='email' class='input-text email-input' [(ngModel)]="email" name="email" required>
+            </div>
+            <button class='btn btn-primary'> Отправить  </button>
+        </form>
+        <div class='progress' [hidden]='load !== true'></div>
+    </div>
+    <button class='modal-close' (click)="closeModal();"></button>
+</template>

@@ -1,0 +1,35 @@
+.main-logo__box {
+    font-size: 60px;
+    font-weight: bold;
+    padding: 20px 0 40px 10px;
+    color: #c8c9ca;
+    text-shadow: 1px 1px 1px #000;
+}
+.h2-main {
+    text-align: center;
+    font-weight: normal;
+    color: #c8c9ca;
+    text-shadow: 1px 1px 1px #000;
+}
+.main-form {
+    max-width: 800px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.35) !important;
+}
+.main-form__input {
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    margin: 10px 0;
+    padding: 0 20px;
+    line-height: 14px;
+    box-sizing: border-box;
+    color: #333;
+    height: 40px;
+}
+.main-form__submit-line {
+    position: relative;
+    padding: 5px;
+}
+.main-form__label {
+    padding-right: 20px;
+}

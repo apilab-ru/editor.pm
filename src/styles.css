@@ -1,1 +1,98 @@
-/* You can add global styles to this file, and also import other style files */
+@media screen and (min-width: 1300px){
+    .row-center {
+        margin-left: 30px !important;
+        margin-right: 30px !important;
+        box-sizing: border-box;
+    }
+}
+.row-center {
+    margin: 0 auto;
+}
+.back-site {
+    background: #3b3b3b;
+}
+body, html {
+    padding: 0px;
+    margin: 0px;
+    font-family: Calibri;
+}
+.box-form {
+    box-sizing: border-box;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0px 0px 10px 1px #000;
+}
+.flex-row {
+    flex: 1;
+}
+.flex-line {
+    display: flex;
+    align-items: center;
+}
+.flex-end {
+    justify-content: flex-end;
+}
+.btn {
+    display: inline-block;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 8px 5px;
+    text-align: center;
+    width: 320px;
+    box-shadow: 0px 0px 10px 1px #000;
+    text-decoration: none;
+    border:none;
+}
+.btn-primary {
+    background: radial-gradient(ellipse at center, rgb(159, 183, 134), 65%, rgb(201, 202, 162) 80%);
+    color: #fff;
+}
+
+.modal-close{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 25px;
+    height: 25px;
+    background: url(./assets/images/remove.png) no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    padding: 0px;
+    border:none;
+    outline: none;
+}
+.menu-box {
+    padding: 20px 0;
+}
+.menu-list {
+    display: table;
+    margin: 0 auto;
+}
+.menu-item.check {
+    background: yellow;
+    color: #000;
+}
+.menu-item {
+    background: #3b3b3b;
+    color: #c8c9ca;
+    padding: 9px 20px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+.input-text{
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    margin: 10px 0;
+    padding: 0 20px;
+    line-height: 14px;
+    box-sizing: border-box;
+    color: #333;
+    height: 40px;
+}
+.progress {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 5%;
+    background: blue;
+}

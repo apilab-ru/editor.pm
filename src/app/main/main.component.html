@@ -1,0 +1,25 @@
+<div>
+  <div class="row-center">
+      <div class="main-logo__box">
+          Инстабук
+      </div>
+      <div>
+          <app-auth></app-auth>
+      </div>
+      <h2 class="h2-main"> Сервис онлайн создания фотокниг по вашим фотографиям из инстаграм </h2>
+  </div>
+  <div class="row-center">
+      <form class="main-form box-form js-main-form">
+          <div class="flex-line">
+              <span class="main-form__label"> Ваш профиль </span>
+              <input class="main-form__input flex-row" type="text" name="link" ng-model="link"
+                     placeholder="Введите ник профиля инстаграм в формате: you"/>
+          </div>
+          <div class="flex-line flex-end main-form__submit-line">
+              <span class="btn btn-primary" ng-click="checkLink()" title='Открыть книгу'>
+                  Открыть
+              </span>
+          </div>
+      </form>
+  </div>
+</div>

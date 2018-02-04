@@ -1,0 +1,16 @@
+.debug-nav {
+    display: flex;
+    padding: 5px;
+    background: #fff;
+}
+.debug-nav a {
+    padding: 3px;
+}
+.app-modal{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 1px;
+    height: 1px;
+    z-index: 9;
+}
