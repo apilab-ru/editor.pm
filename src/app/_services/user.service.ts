@@ -34,9 +34,7 @@ export class UserService {
   loadUser() {
     this.http.get<Client>('user/client/')
       .subscribe(value => {
-        console.log('load user', value);
-        this.user = value;
-        this.cookieService.set( 'instaauth', value.cookies, 9999 );
+        this.setUser(value);
       });
   }
 
@@ -46,9 +44,10 @@ export class UserService {
   }
 
   setUser(client) {
+    console.log('load user', client);
     this.user = client;
+    this.cookieService.set( 'instaauth', client.cookies, 9999 );
     console.log('user', this.user);
-
   }
 
 }

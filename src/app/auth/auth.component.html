@@ -1,7 +1,7 @@
 <div class='auth-box'>
     <div *ngIf="userService.chechAuth(); then cabinet else login"></div>
     <ng-template #login><span class='btn btn-primary' (click)="openAuth()">Авторизация</span></ng-template>
-    <ng-template #cabinet><span class='btn btn-primary'>Кабинет {{userService.user.name}} </span></ng-template>
+    <ng-template #cabinet><span class='btn btn-primary' routerLink="/cabinet" >Кабинет {{userService.user.name}} </span></ng-template>
 </div>
 
 <template id="auth-modal">

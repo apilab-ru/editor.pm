@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from '../_services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class CabinetComponent {
   title = 'Cabinet';
+
+  constructor(public user: UserService) {
+    // console.log('user', this.user);
+  }
+
 }

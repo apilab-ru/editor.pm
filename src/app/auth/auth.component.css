@@ -5,3 +5,14 @@
     width: 100%;
     margin-bottom: 20px;
 }
+.menu-box__item {
+    position: relative;
+}
+.progress {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: calc(100% + 10px);
+    background: #0000ff1c;
+    height: calc(100% + 10px);
+}

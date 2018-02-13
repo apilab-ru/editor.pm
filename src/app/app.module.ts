@@ -29,6 +29,7 @@ import { ApiInterceptor } from './api.interceptor';
 import { ModalComponent } from './modal/modal.component';
 
 import { ModalService } from './_services/index';
+import { EventsService } from './_services/events.service';
 
 @NgModule({
   imports: [
@@ -46,11 +47,19 @@ import { ModalService } from './_services/index';
     AuthComponent,
     ModalComponent
   ],
-  providers: [TemplatesService, BookService, UserService,  CookieService, ModalService, {
-    provide: HTTP_INTERCEPTORS,
-    useClass: ApiInterceptor,
-    multi: true,
-  }],
+  providers: [
+    TemplatesService,
+    BookService,
+    UserService,
+    CookieService,
+    ModalService,
+    EventsService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ApiInterceptor,
+      multi: true,
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

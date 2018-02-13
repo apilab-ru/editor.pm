@@ -1,2 +1,14 @@
-<h2> Cabinet </h2>
+<div class="caninet-main row-cente">
+    <div class="flex-line">
+        <h2 class='back-tab'>
+            Кабинет
+        </h2>
+        <div class='cabinet-link' routerLink="/editor"> К редактору </div>
+        <div class='cabinet-link' routerLink="/"> На главную </div>
+
+        <div class="user-box">
+            {{ user.user.name }}  {{ user.user.surname }}
+        </div>
+    </div>
+</div>
 
