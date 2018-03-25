@@ -74,7 +74,7 @@ export class AuthComponent implements OnInit {
           this.events.pool()
             .then((res) => {
               console.log('try set user', res);
-              this.userService.setUser(res.client);
+              this.userService.setUser(res['client']);
               this.load = false;
             });
         }
